@@ -1,0 +1,59 @@
+﻿<Window x:Class="SistemaEstacionamiento.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sistema de Estacionamiento" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Configuración del Evento"
+                   FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,15">
+            <TextBlock Text="Nombre del evento:" VerticalAlignment="Center" Width="150"/>
+            <TextBox Text="{Binding NombreEvento, UpdateSourceTrigger=PropertyChanged}"
+                     Width="300" Padding="5"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="2" ItemsSource="{Binding Sectores}"
+                  AutoGenerateColumns="False" CanUserAddRows="False"
+                  HeadersVisibility="Column" Margin="0,0,0,15">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Sector" Binding="{Binding Nombre}" Width="150"/>
+                <DataGridTextColumn Header="Capacidad" Binding="{Binding Capacidad}" Width="100"/>
+                <DataGridTextColumn Header="Lugares por fila" Binding="{Binding LugaresPorFila}" Width="130"/>
+                <DataGridTextColumn Header="Precio" Binding="{Binding Precio}" Width="100"/>
+                <DataGridTemplateColumn Header="Acción" Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Quitar"
+                                    Command="{Binding DataContext.QuitarSectorCommand,
+                                              RelativeSource={RelativeSource AncestorType=Window}}"
+                                    CommandParameter="{Binding}"
+                                    Margin="2" Padding="5,2"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,0,15">
+            <Button Content="+ Agregar sector" Command="{Binding AgregarSectorCommand}"
+                    Padding="15,8" Margin="0,0,10,0"/>
+            <Button Content="Generar lugares" Command="{Binding GenerarCommand}"
+                    Padding="15,8" FontWeight="Bold"/>
+            <Button Content="Ir a Garita →" Click="IrAGarita_Click"
+                    Padding="15,8" Margin="10,0,0,0" FontWeight="Bold"
+                    Background="LightBlue"/>
+        </StackPanel>
+
+        <TextBlock Grid.Row="4" Text="{Binding Mensaje}"
+                   FontSize="14" Foreground="DarkGreen" TextWrapping="Wrap"/>
+    </Grid>
+</Window>

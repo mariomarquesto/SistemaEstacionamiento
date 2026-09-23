@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FEC25098-F279-471C-A1AD-91391A935553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaEstacionamiento.App", "src\SistemaEstacionamiento.App\SistemaEstacionamiento.App.csproj", "{8D5ADE73-D256-425D-8500-A926F285E16E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaEstacionamiento.Core", "src\SistemaEstacionamiento.Core\SistemaEstacionamiento.Core.csproj", "{FFE19036-F263-48EB-A585-9689F674A3A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaEstacionamiento.Infrastructure", "src\SistemaEstacionamiento.Infrastructure\SistemaEstacionamiento.Infrastructure.csproj", "{260984F6-EE3F-48BB-A612-3872459959BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C2CEB084-EE57-41CC-B26E-6BBBC35B3DAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGenerador", "tests\TestGenerador\TestGenerador.csproj", "{199C63B9-D1E9-4963-8AD6-E7C60B60ADA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D5ADE73-D256-425D-8500-A926F285E16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5ADE73-D256-425D-8500-A926F285E16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5ADE73-D256-425D-8500-A926F285E16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5ADE73-D256-425D-8500-A926F285E16E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFE19036-F263-48EB-A585-9689F674A3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE19036-F263-48EB-A585-9689F674A3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE19036-F263-48EB-A585-9689F674A3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE19036-F263-48EB-A585-9689F674A3A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{260984F6-EE3F-48BB-A612-3872459959BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{260984F6-EE3F-48BB-A612-3872459959BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{260984F6-EE3F-48BB-A612-3872459959BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{260984F6-EE3F-48BB-A612-3872459959BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{199C63B9-D1E9-4963-8AD6-E7C60B60ADA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199C63B9-D1E9-4963-8AD6-E7C60B60ADA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199C63B9-D1E9-4963-8AD6-E7C60B60ADA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199C63B9-D1E9-4963-8AD6-E7C60B60ADA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8D5ADE73-D256-425D-8500-A926F285E16E} = {FEC25098-F279-471C-A1AD-91391A935553}
+		{FFE19036-F263-48EB-A585-9689F674A3A1} = {FEC25098-F279-471C-A1AD-91391A935553}
+		{260984F6-EE3F-48BB-A612-3872459959BF} = {FEC25098-F279-471C-A1AD-91391A935553}
+		{199C63B9-D1E9-4963-8AD6-E7C60B60ADA2} = {C2CEB084-EE57-41CC-B26E-6BBBC35B3DAE}
+	EndGlobalSection
+EndGlobal
